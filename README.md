@@ -1,6 +1,6 @@
 # JSOptimizer
 ### Under Construction...
-These issue patterns, are observed from the popular projects like Tensorflow.js, Deno, Calypso,etc. The implement is based on the functional programming rules. This project is still on going.
+These issue patterns, are observed from the popular projects like Tensorflow.js, Deno, Calypso,etc. The implement is based on the functional programming rules. This project is still on going.
 ## Environment Setup
 
 > OS: 64bit Mac OS X 10.14.2 18C54
