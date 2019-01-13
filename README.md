@@ -13,7 +13,7 @@ These issue patterns, are observed from the popular projects like Tensorflow.js,
 > 
 > Node.js: v10.5.0
 > 
-> Browser: Version 71.0.3578.98 (Official Build) (64-bit)
+> Browser: Chrome Version 71.0.3578.98 (Official Build) (64-bit)
 
 
 ## Evaluation
