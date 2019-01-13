@@ -151,7 +151,7 @@ const leakFunction = () =>{
 leakFunction();
 ```
 #### Performance
-In some scenarios, developers use console.log() to debug or display some runtime informations. However, it will make the object can not be collect by the GC. Even worse, the developers will usually forget to remove the log statements when they deliver the code to the production environment. The issues have been observed from some international companies, like Baidu.
+In some scenarios, developers use console.log() to debug or display some runtime informations. However, it will make the object can not be collect by the GC. Even worse, the developers will usually forget to remove the log statements when they deliver the code to the production environment. The issues have been observed from some international companies, like Baidu.
 
 ### Closure Leak
 > Affected Applications: Client and Server
