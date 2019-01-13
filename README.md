@@ -1,5 +1,4 @@
 # JSOptimizer
-### Under Construction...
 These issue patterns, are observed from the popular projects like Tensorflow.js, Deno, Calypso,etc. The implement is based on the functional programming rules. This project is still on going.
 ## Environment Setup
 
