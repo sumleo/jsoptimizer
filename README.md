@@ -1,5 +1,5 @@
 # JSOptimizer
-These issue patterns, are observed from the popular projects like Tensorflow.js, Deno, Calypso,etc. The implement is based on the functional programming rules. This project is still on going.
+These issue patterns, are observed from the popular projects like Tensorflow.js, Deno, Calypso, etc. The implementation is based on the functional programming rules. This project is still ongoing.
 ## Environment Setup
 
 > OS: 64bit Mac OS X 10.14.2 18C54
@@ -70,45 +70,7 @@ window.onload = function () {
 }
 ```
 #### Performance
-The variables that haven't declared in the appropriate context will lead to global variable leak. In some special scenarios, it will be conflict to the libraries variables.
-
-### Global Variable Leak
-> Affected Applications: Client and Server
-> 
-> Impact: Memory Leak
-
-#### Implementation
-
-```js
-window.onload = function () {
-    /**
-    * Leak to global context
-    **/
-    leakVariable={};
-}
-```
-#### Performance
-The variables that haven't declared in the appropriate context will lead to global variable leak. In some special scenarios, it will be conflict to the libraries variables.
-
-### Null Pointer
-> Affected Applications: Client and Server
-> 
-> Impact: Runtime Crash
-
-#### Implementation
-
-```js
-const dangerousFunction = () =>{
-    const dangerousObj={};
-    /**
-    *   Null pointer opreation
-    **/
-    console.log(dangerousObj.a);
-};
-dangerousFunction();
-```
-#### Performance
-The null pointer will cause the crash in the modern front-end application such as React.js, Vue,etc. It had bad effect in both server-side and client-side.
+The variables that haven't declared in the appropriate context will lead to a global variable leak. In some special scenarios, it will be a conflict to the libraries variables.
 
 ### Null Pointer
 > Affected Applications: Client and Server
@@ -128,7 +90,7 @@ const dangerousFunction = () =>{
 dangerousFunction();
 ```
 #### Performance
-The null pointer will cause the crash in the modern front-end application such as React.js, Vue,etc. It will have bad effect in both server-side and client-side.
+The null pointer will cause the crash in the modern front-end application such as React.js, Vue, etc. It will have a bad effect in both server-side and client-side.
 
 ### Console Output Leak
 > Affected Applications: Client and Server
@@ -150,7 +112,7 @@ const leakFunction = () =>{
 leakFunction();
 ```
 #### Performance
-In some scenarios, developers use console.log() to debug or display some runtime informations. However, it will make the object can not be collect by the GC. Even worse, the developers will usually forget to remove the log statements when they deliver the code to the production environment. The issues have been observed from some international companies, like Baidu.
+In some scenarios, developers use console.log() to debug or display some runtime pieces of information. However, it will make the object cannot be collected by the GC. Even worse, the developers will usually forget to remove the log statements when they deliver the code to the production environment. The issues have been observed from some international companies, like Baidu.
 
 ### Closure Leak
 > Affected Applications: Client and Server
@@ -173,7 +135,7 @@ const outer = () => {
 setInterval(() => res = outer(), 10);
 ```
 #### Performance
-This kind of memory leak are very common and hard to aware by the developers. But it indeed leads to a large amount of resource consumption.
+This kind of memory leak is very common and hard to aware by the developers. But it indeed leads to a large amount of resource consumption.
 
 ### Loop DOM Access
 > Affected Applications: Client
@@ -259,9 +221,10 @@ This kind of memory leak are very common and hard to aware by the developers. Bu
 ```
 #### Performance
 
-The setTimeout will execute after time out. But it depends on the main thread. If it is not free at time out，then it will be delay.
+The setTimeout will execute after time out. But it depends on the main thread. If it is not free at time out，then it will be a delay.
 
-The requestAnimationFrame do not need timeout setting.When the browser refreshes, it will call the callback function defined in the requestAnimationFrame. The browser will automatically optimize the callback function. Besides, if the page is not active, the animation will pause automatically to save the CPU consumption.
+The requestAnimationFrame do not need timeout setting. When the browser refreshes, it will call the callback function defined in the requestAnimationFrame. The browser will automatically optimize the callback function. Besides, if the page is not active, the animation will pause automatically to save the CPU consumption.
+
 
 
 
